@@ -1,5 +1,15 @@
-
+<!DOCTYPE html>
+<html lang="en">
+<head>
 <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Abhinav Mangal — Backend Engineer | Node.js &amp; TypeScript</title>
+<meta name="description" content="Backend Engineer with 3+ years of experience building Node.js and TypeScript services using MongoDB, Redis, RabbitMQ, Socket.IO, and AWS.">
+<link rel="canonical" href="https://abhinav0988.github.io/portfolio/">
+<meta property="og:title" content="Abhinav Mangal — Backend Engineer | Node.js &amp; TypeScript">
+<meta property="og:description" content="Backend Engineer with 3+ years of experience building Node.js and TypeScript services using MongoDB, Redis, RabbitMQ, Socket.IO, and AWS.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://abhinav0988.github.io/portfolio/">
 <style>
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
 :root{
@@ -16,17 +26,18 @@
   --amber-light:#fef3c7;
   --text:#1e1b4b;
   --text2:#4b5563;
-  --text3:#9ca3af;
+  --text3:#6b7280;
   --border:#e5e7eb;
   --border2:#ddd6fe;
   --shadow:0 1px 4px rgba(79,70,229,0.08);
   --shadow2:0 4px 20px rgba(79,70,229,0.12);
 }
+html{scroll-behavior:smooth;scroll-padding-top:96px}
 body{font-family:'Segoe UI',system-ui,sans-serif;background:var(--bg);color:var(--text);line-height:1.7;font-size:15px}
 .wrap{max-width:860px;margin:0 auto;padding:0 1.5rem}
 
 nav{background:#fff;border-bottom:1px solid var(--border);padding:0 1.5rem;height:54px;display:flex;align-items:center;justify-content:space-between;position:sticky;top:0;z-index:99;box-shadow:var(--shadow)}
-.nav-logo{font-weight:700;font-size:15px;color:var(--indigo);letter-spacing:-0.01em}
+.nav-logo{font-weight:700;font-size:15px;color:var(--indigo);letter-spacing:-0.01em;text-decoration:none}
 .nav-links{display:flex;gap:1.75rem;list-style:none}
 .nav-links a{font-size:13px;font-weight:500;color:var(--text2);text-decoration:none;transition:color 0.2s}
 .nav-links a:hover{color:var(--indigo)}
@@ -43,7 +54,7 @@ h2 em{font-style:normal;color:var(--indigo)}
 @keyframes pulse{0%,100%{opacity:1;transform:scale(1)}50%{opacity:0.5;transform:scale(0.75)}}
 h1{font-size:clamp(2.4rem,6vw,4rem);font-weight:900;line-height:1.05;letter-spacing:-0.03em;margin-bottom:1.25rem;color:var(--text)}
 h1 .hi{color:var(--indigo)}
-.hero-sub{font-size:1.05rem;color:var(--text2);max-width:520px;margin-bottom:2.25rem;line-height:1.75}
+.hero-sub{font-size:1.05rem;color:var(--text2);max-width:640px;margin-bottom:2.25rem;line-height:1.75}
 .stats{display:flex;flex-wrap:wrap;gap:0;margin-bottom:2.5rem;background:#fff;border:1px solid var(--border);border-radius:14px;overflow:hidden;box-shadow:var(--shadow)}
 .stat{flex:1;min-width:140px;padding:1.25rem 1.5rem;border-right:1px solid var(--border);text-align:center}
 .stat:last-child{border-right:none}
@@ -68,7 +79,7 @@ h1 .hi{color:var(--indigo)}
 .exp-card{background:#fff;border:1px solid var(--border);border-radius:16px;padding:2.25rem;box-shadow:var(--shadow);position:relative;overflow:hidden}
 .exp-stripe{position:absolute;top:0;left:0;right:0;height:4px;background:linear-gradient(90deg,var(--indigo),var(--violet),var(--emerald))}
 .exp-hd{display:flex;justify-content:space-between;align-items:flex-start;gap:1rem;margin-bottom:1.5rem;flex-wrap:wrap}
-.exp-title{font-size:1.2rem;font-weight:800;color:var(--text);margin-bottom:3px}
+.exp-title{font-size:1.2rem;font-weight:800;color:var(--text);margin:0 0 3px}
 .exp-co{color:var(--indigo);font-size:14px;font-weight:700}
 .exp-sub{font-size:12px;color:var(--text3);margin-top:5px}
 .exp-date{background:var(--indigo-light);color:var(--indigo);font-size:11.5px;font-weight:700;padding:6px 13px;border-radius:100px;white-space:nowrap;border:1px solid var(--indigo-mid)}
@@ -95,8 +106,8 @@ h1 .hi{color:var(--indigo)}
 .sc{background:#fff;border:1px solid var(--border);border-radius:14px;padding:1.25rem;transition:all 0.2s}
 .sc:hover{border-color:var(--indigo-mid);box-shadow:var(--shadow)}
 .sc-head{display:flex;align-items:center;gap:10px;margin-bottom:.85rem}
+.sc h3{font-size:13px;font-weight:700;color:var(--text);margin:0}
 .sc-icon{width:36px;height:36px;border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:18px;flex-shrink:0}
-.sc h3{font-size:13px;font-weight:700;color:var(--text)}
 .tags{display:flex;flex-wrap:wrap;gap:5px}
 .tag{font-size:11px;font-weight:600;padding:4px 10px;border-radius:6px;letter-spacing:0.01em}
 .ti{background:var(--indigo-light);color:var(--indigo)}
@@ -108,7 +119,7 @@ h1 .hi{color:var(--indigo)}
 /* EDU */
 .edu{background:#fff;border:1px solid var(--border);border-radius:14px;padding:1.5rem 1.75rem;display:flex;align-items:center;gap:1.25rem;flex-wrap:wrap;box-shadow:var(--shadow)}
 .edu-icon{width:52px;height:52px;background:var(--indigo-light);border:1.5px solid var(--indigo-mid);border-radius:13px;display:flex;align-items:center;justify-content:center;font-size:26px;flex-shrink:0}
-.edu-info h3{font-size:15px;font-weight:800;margin-bottom:3px;color:var(--text)}
+.edu-info h3{font-size:15px;font-weight:800;margin:0 0 3px;color:var(--text)}
 .edu-info p{font-size:12px;color:var(--text2)}
 .edu-yr{margin-left:auto;background:var(--indigo-light);color:var(--indigo);font-size:12px;font-weight:700;padding:6px 14px;border-radius:100px;border:1px solid var(--indigo-mid)}
 
@@ -118,7 +129,7 @@ h1 .hi{color:var(--indigo)}
 .proj:hover{border-color:var(--indigo-mid);box-shadow:var(--shadow2)}
 .proj-hd{display:flex;justify-content:space-between;align-items:flex-start;gap:1rem;margin-bottom:.85rem;flex-wrap:wrap}
 .proj-kicker{font-size:11px;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;color:var(--indigo);margin-bottom:4px}
-.proj-title{font-size:1.15rem;font-weight:800;color:var(--text);letter-spacing:-0.02em}
+.proj-title{font-size:1.15rem;font-weight:800;color:var(--text);letter-spacing:-0.02em;margin:0}
 .proj-meta{font-size:12px;color:var(--text3);margin-top:3px}
 .proj-desc{font-size:13.5px;color:var(--text2);margin-bottom:1rem;max-width:680px}
 .proj-actions{display:flex;align-items:center;gap:.6rem;flex-shrink:0}
@@ -130,16 +141,23 @@ h1 .hi{color:var(--indigo)}
 /* CONTACT */
 #contact{background:linear-gradient(135deg,var(--indigo-light) 0%,#f5f3ff 100%);border-radius:20px;padding:3.5rem 2rem;text-align:center;border:1px solid var(--border2);margin-bottom:3rem}
 #contact h2{margin-bottom:.75rem}
-.c-sub{color:var(--text2);max-width:440px;margin:0 auto 2rem;font-size:14px}
-.c-email{display:inline-flex;align-items:center;gap:9px;background:#fff;border:1.5px solid var(--indigo-mid);border-radius:12px;padding:.9rem 2rem;margin-bottom:1.5rem;font-size:14px;font-weight:700;color:var(--indigo);text-decoration:none;transition:all 0.2s;box-shadow:var(--shadow)}
+.c-sub{color:var(--text2);max-width:520px;margin:0 auto 2rem;font-size:14px}
+.c-email{display:inline-flex;align-items:center;gap:9px;background:#fff;border:1.5px solid var(--indigo-mid);border-radius:12px;padding:.9rem 2rem;margin-bottom:1.5rem;font-size:14px;font-weight:700;color:var(--indigo);text-decoration:none;transition:all 0.2s;box-shadow:var(--shadow);max-width:100%}
 .c-email:hover{box-shadow:var(--shadow2);transform:translateY(-2px)}
 .c-links{display:flex;gap:.75rem;justify-content:center;flex-wrap:wrap}
 .cl{display:inline-flex;align-items:center;gap:7px;padding:10px 20px;border-radius:9px;font-size:13px;font-weight:600;color:var(--text2);border:1.5px solid var(--border);background:#fff;text-decoration:none;transition:all 0.2s}
 .cl:hover{color:var(--indigo);border-color:var(--indigo-mid);transform:translateY(-2px)}
 
+a:focus-visible,.btn:focus-visible,button:focus-visible{outline:2px solid var(--indigo);outline-offset:3px}
+
 footer{text-align:center;padding:2rem;font-size:12px;color:var(--text3);border-top:1px solid var(--border)}
 
+@media(max-width:760px){
+  nav{height:auto;min-height:54px;padding:.7rem 1rem;flex-wrap:wrap;row-gap:.4rem}
+  .nav-links{gap:.65rem 1rem;flex-wrap:wrap}
+}
 @media(max-width:600px){
+  .wrap{padding:0 1rem}
   .stat{min-width:calc(50% - 1px)}
   .stat:nth-child(2){border-right:none}
   .stat:nth-child(3){border-top:1px solid var(--border);border-right:1px solid var(--border)}
@@ -148,11 +166,19 @@ footer{text-align:center;padding:2rem;font-size:12px;color:var(--text3);border-t
   .exp-loc{text-align:left}
   .edu-yr{margin-left:0}
   .proj-hd{flex-direction:column}
+  .c-email{padding:.85rem 1rem}
+  #contact{padding:2.5rem 1.15rem}
+}
+@media(prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  *,*::before,*::after{animation:none !important;transition:none !important}
 }
 </style>
+</head>
+<body>
 
-<nav>
-  <span class="nav-logo">Abhinav Mangal</span>
+<nav aria-label="Primary">
+  <a class="nav-logo" href="#hero">Abhinav Mangal</a>
   <ul class="nav-links">
     <li><a href="#hero">About</a></li>
     <li><a href="#experience">Experience</a></li>
@@ -162,12 +188,12 @@ footer{text-align:center;padding:2rem;font-size:12px;color:var(--text3);border-t
   </ul>
 </nav>
 
-<div class="wrap">
+<main class="wrap">
 
 <section id="hero">
-  <div class="badge"><span class="dot"></span> OPEN TO OPPORTUNITIES · NODE.JS BACKEND</div>
+  <div class="badge"><span class="dot" aria-hidden="true"></span> OPEN TO OPPORTUNITIES · NODE.JS BACKEND</div>
   <h1>Hi, I'm<br><span class="hi">Abhinav Mangal</span></h1>
-  <p class="hero-sub">Backend engineer with 3+ years building high-throughput healthcare APIs and microservices. I design, ship, and scale production systems used by hundreds of thousands of users.</p>
+  <p class="hero-sub">Backend Engineer with 3+ years building Node.js and TypeScript services for a healthcare platform supporting 100K+ active users. I design and ship production APIs, real-time features, asynchronous workflows, and data-intensive backend services.</p>
   <div class="stats">
     <div class="stat"><div class="sn">100K+</div><div class="sl">Active users served</div></div>
     <div class="stat"><div class="sn">50+</div><div class="sl">Production REST APIs</div></div>
@@ -175,9 +201,11 @@ footer{text-align:center;padding:2rem;font-size:12px;color:var(--text3);border-t
     <div class="stat"><div class="sn">3+</div><div class="sl">Years in production</div></div>
   </div>
   <div class="cta">
-    <a href="mailto:abhinavmangal68@gmail.com" class="btn btn-p">📧 Get in touch</a>
-    <a href="https://www.linkedin.com/in/abhinavmangal" target="_blank" class="btn btn-o">LinkedIn ↗</a>
-    <a href="https://github.com/abhinav0988" target="_blank" class="btn btn-o">GitHub ↗</a>
+    <!-- TODO: No resume PDF is in this repository. Point this button at the relative PDF path once the file is added, for example href="Abhinav_Mangal_Backend_Engineer_Final_2026.pdf". -->
+    <a class="btn btn-p" tabindex="0" aria-disabled="true">Download Resume ↓</a>
+    <a href="https://github.com/abhinav0988" class="btn btn-o" target="_blank" rel="noopener noreferrer">GitHub ↗</a>
+    <a href="https://www.linkedin.com/in/abhinavmangal" class="btn btn-o" target="_blank" rel="noopener noreferrer">LinkedIn ↗</a>
+    <a href="mailto:abhinavmangal68@gmail.com" class="btn btn-o">Get in touch</a>
   </div>
 </section>
 
@@ -185,12 +213,12 @@ footer{text-align:center;padding:2rem;font-size:12px;color:var(--text3);border-t
   <div class="label">// Specialisation</div>
   <h2>What I <em>build</em></h2>
   <div class="build-grid">
-    <div class="bc"><div class="bi" style="background:#ede9fe">⚡</div><h3>High-throughput REST APIs</h3><p>50+ production endpoints in Node.js + TypeScript with full lifecycle ownership from schema design to production support.</p></div>
-    <div class="bc"><div class="bi" style="background:#d1fae5">🔄</div><h3>Event-driven microservices</h3><p>Async inter-service communication via RabbitMQ — reducing coupling and improving fault isolation across services.</p></div>
-    <div class="bc"><div class="bi" style="background:#fef3c7">🔒</div><h3>Secure auth systems</h3><p>JWT, bcrypt, and 4-level RBAC securing all platform APIs — patient, doctor, admin, and super-admin roles.</p></div>
-    <div class="bc"><div class="bi" style="background:#fdf4ff">📡</div><h3>Real-time features</h3><p>Low-latency doctor-patient video consultation and live appointment tracking using Socket.io.</p></div>
-    <div class="bc"><div class="bi" style="background:#ede9fe">🚀</div><h3>CI/CD & cloud infra</h3><p>Zero-downtime deployments on AWS EC2 + S3, with CI/CD pipelines across dev, staging, and production.</p></div>
-    <div class="bc"><div class="bi" style="background:#d1fae5">📊</div><h3>Analytics dashboards</h3><p>Admin panel + analytics APIs with optimised MongoDB aggregation pipelines, ~30% faster with strategic indexing.</p></div>
+    <div class="bc"><div class="bi" style="background:#ede9fe" aria-hidden="true">⚡</div><h3>High-throughput REST APIs</h3><p>50+ production endpoints in Node.js and TypeScript, from schema design through production support.</p></div>
+    <div class="bc"><div class="bi" style="background:#d1fae5" aria-hidden="true">🔄</div><h3>Asynchronous workflows</h3><p>RabbitMQ-based asynchronous workflows that reduce synchronous dependencies and improve fault isolation between backend processes.</p></div>
+    <div class="bc"><div class="bi" style="background:#fef3c7" aria-hidden="true">🔒</div><h3>Secure auth systems</h3><p>JWT, bcrypt, input validation, and four-level RBAC for patient, doctor, admin, and super-admin access.</p></div>
+    <div class="bc"><div class="bi" style="background:#fdf4ff" aria-hidden="true">📡</div><h3>Real-time features</h3><p>Video consultations and live appointment tracking using Socket.IO.</p></div>
+    <div class="bc"><div class="bi" style="background:#ede9fe" aria-hidden="true">🚀</div><h3>CI/CD &amp; cloud infrastructure</h3><p>Deployed services on AWS EC2 and S3 across development, staging, and production with CI/CD build, test, and deployment workflows.</p></div>
+    <div class="bc"><div class="bi" style="background:#d1fae5" aria-hidden="true">📊</div><h3>Analytics APIs</h3><p>Booking, revenue, and consultation analytics APIs. MongoDB aggregation and indexing improved response times by ~30%.</p></div>
   </div>
 </section>
 
@@ -201,9 +229,9 @@ footer{text-align:center;padding:2rem;font-size:12px;color:var(--text3);border-t
     <div class="exp-stripe"></div>
     <div class="exp-hd">
       <div>
-        <div class="exp-title">Node.js Backend Developer</div>
+        <h3 class="exp-title">Node.js Backend Developer</h3>
         <div class="exp-co">Maren Solutions Pvt. Ltd.</div>
-        <div class="exp-sub">Sanar Healthcare Platform · Telemedicine · Home Health · Microservices</div>
+        <div class="exp-sub">Sanar Healthcare Platform · Telemedicine · Home Health</div>
       </div>
       <div style="text-align:right">
         <div class="exp-date">Dec 2022 – Present</div>
@@ -213,20 +241,20 @@ footer{text-align:center;padding:2rem;font-size:12px;color:var(--text3);border-t
     <div class="metrics">
       <div class="mp"><span class="mn">100K+</span><span class="ml">Active users</span></div>
       <div class="mp"><span class="mn">50+</span><span class="ml">APIs delivered</span></div>
-      <div class="mp"><span class="mn">~30%</span><span class="ml">Faster queries</span></div>
-      <div class="mp"><span class="mn">10</span><span class="ml">Eng. agile team</span></div>
+      <div class="mp"><span class="mn">~30%</span><span class="ml">Faster analytics</span></div>
+      <div class="mp"><span class="mn">10</span><span class="ml">Agile team</span></div>
     </div>
     <ul class="ach">
-      <li><strong>Architected and maintained</strong> the backend for Sanar Healthcare Platform — telemedicine and home-health serving 100K+ active users across mobile and web.</li>
-      <li><strong>Designed and delivered 50+ production RESTful APIs</strong> (Node.js · Express.js · TypeScript), owning full lifecycle from schema design to production support.</li>
-      <li><strong>Built real-time infrastructure</strong> for video consultation and live appointment tracking using Socket.io for low-latency sessions.</li>
-      <li><strong>Implemented event-driven microservices</strong> via RabbitMQ for async inter-service communication, reducing coupling and improving fault isolation.</li>
-      <li><strong>Engineered JWT auth, bcrypt hashing, and 4-level RBAC</strong> (patient · doctor · admin · super-admin) securing all platform APIs end-to-end.</li>
-      <li><strong>Optimized MongoDB aggregation pipelines</strong> with strategic indexes, improving analytics API response times by ~30% on complex reporting queries.</li>
-      <li><strong>Implemented Redis caching layer</strong> on high-traffic endpoints, measurably reducing redundant DB queries during peak usage.</li>
-      <li><strong>Integrated Payment Gateway</strong> covering booking fees, subscription billing, physiotherapy charges, and refund handling.</li>
-      <li><strong>Deployed on AWS EC2 and S3</strong> with CI/CD pipelines across dev, staging, and production for zero-downtime releases.</li>
-      <li><strong>Built Admin Panel and Analytics APIs</strong> powering operations dashboards — booking counts, revenue, consultation metrics, and live KPIs.</li>
+      <li><strong>Maintained</strong> telemedicine and home-health services on the Sanar Healthcare Platform, supporting 100K+ active users across mobile and web.</li>
+      <li><strong>Delivered 50+ production REST APIs</strong> with Node.js, Express.js, and TypeScript, from schema design through production support.</li>
+      <li><strong>Built Socket.IO features</strong> for real-time video consultations and live appointment tracking.</li>
+      <li><strong>Built RabbitMQ-based asynchronous workflows</strong> to reduce synchronous dependencies and improve fault isolation.</li>
+      <li><strong>Implemented JWT authentication, bcrypt hashing, input validation, and four-level RBAC</strong> for patient, doctor, admin, and super-admin access.</li>
+      <li><strong>Improved analytics API response times by ~30%</strong> through MongoDB aggregation and index optimization.</li>
+      <li><strong>Used Redis caching</strong> to reduce repeated queries on read-heavy endpoints.</li>
+      <li><strong>Integrated payment flows</strong> for bookings, subscriptions, physiotherapy charges, and refunds.</li>
+      <li><strong>Deployed services on AWS EC2 and S3</strong> across development, staging, and production with CI/CD build, test, and deployment workflows.</li>
+      <li><strong>Delivered booking, revenue, and consultation analytics APIs</strong> for operations reporting.</li>
     </ul>
   </div>
 </section>
@@ -238,15 +266,15 @@ footer{text-align:center;padding:2rem;font-size:12px;color:var(--text3);border-t
     <article class="proj">
       <div class="proj-hd">
         <div>
-          <div class="proj-kicker">Personal · Distributed systems</div>
-          <div class="proj-title">RideFlow — Real-Time Ride Platform</div>
+          <div class="proj-kicker">Personal portfolio project · Distributed systems</div>
+          <h3 class="proj-title">RideFlow — Real-Time Ride Platform</h3>
           <div class="proj-meta">Node.js · TypeScript · PostgreSQL · Redis · RabbitMQ · Socket.IO</div>
         </div>
         <div class="proj-actions">
-          <a class="proj-link" href="https://github.com/abhinav0988/rideflow" target="_blank" rel="noopener">GitHub ↗</a>
+          <a class="proj-link" href="https://github.com/abhinav0988/rideflow" target="_blank" rel="noopener noreferrer">GitHub ↗</a>
         </div>
       </div>
-      <p class="proj-desc">Production-style ride platform covering nearby-driver discovery, race-safe acceptance, and at-least-once messaging across multiple Socket.IO servers.</p>
+      <p class="proj-desc">Backend-focused ride platform covering nearby-driver discovery, race-safe acceptance, and at-least-once messaging across multiple Socket.IO servers.</p>
       <div class="tags">
         <span class="tag ti">TypeScript</span>
         <span class="tag tg">PostgreSQL</span>
@@ -259,7 +287,7 @@ footer{text-align:center;padding:2rem;font-size:12px;color:var(--text3);border-t
       <ul class="ach">
         <li><strong>Nearby-driver discovery</strong> with Redis GEO and 30-second presence expiration, with Socket.IO instances connected through the Redis adapter.</li>
         <li><strong>Race-safe ride acceptance</strong> using Redis SET NX locking and a PostgreSQL conditional update so only one driver can accept an offered ride.</li>
-        <li><strong>Transactional outbox</strong> with PostgreSQL idempotency, RabbitMQ publisher confirms, retries, a dead-letter queue, and idempotent consumers.</li>
+        <li><strong>Transactional outbox</strong> with PostgreSQL idempotency, RabbitMQ publisher confirms, retries, a dead-letter queue, and idempotent consumers for at-least-once delivery.</li>
         <li><strong>Concurrency and messaging tests</strong> with Jest and Testcontainers, plus GitHub Actions CI for the distributed flows.</li>
       </ul>
     </article>
@@ -267,15 +295,15 @@ footer{text-align:center;padding:2rem;font-size:12px;color:var(--text3);border-t
     <article class="proj">
       <div class="proj-hd">
         <div>
-          <div class="proj-kicker">Personal · v1.0.0</div>
-          <div class="proj-title">Shortify — URL Shortener &amp; Analytics</div>
+          <div class="proj-kicker">Personal portfolio project · v1.0.0</div>
+          <h3 class="proj-title">Shortify — URL Shortener &amp; Analytics</h3>
           <div class="proj-meta">Fastify · TypeScript · MongoDB · Redis · React</div>
         </div>
         <div class="proj-actions">
-          <a class="proj-link" href="https://github.com/abhinav0988/shortify" target="_blank" rel="noopener">GitHub ↗</a>
+          <a class="proj-link" href="https://github.com/abhinav0988/shortify" target="_blank" rel="noopener noreferrer">GitHub ↗</a>
         </div>
       </div>
-      <p class="proj-desc">Full-stack shortener with unique short codes under concurrent creates, cache-aside redirects, shared rate limits, and click analytics.</p>
+      <p class="proj-desc">URL shortener with unique short codes under concurrent creates, cache-aside redirects, shared rate limits, and click analytics.</p>
       <div class="tags">
         <span class="tag ti">Fastify</span>
         <span class="tag ti">TypeScript</span>
@@ -297,30 +325,30 @@ footer{text-align:center;padding:2rem;font-size:12px;color:var(--text3);border-t
 
 <section id="skills">
   <div class="label">// Tech Stack</div>
-  <h2>Tools & <em>technologies</em></h2>
+  <h2>Tools &amp; <em>technologies</em></h2>
   <div class="stack-grid">
-    <div class="si"><div class="si-icon">🟢</div><div class="si-name">Node.js</div><div class="si-type">RUNTIME</div></div>
-    <div class="si"><div class="si-icon">🔷</div><div class="si-name">TypeScript</div><div class="si-type">LANGUAGE</div></div>
-    <div class="si"><div class="si-icon">🛤️</div><div class="si-name">Express.js</div><div class="si-type">FRAMEWORK</div></div>
-    <div class="si"><div class="si-icon">🍃</div><div class="si-name">MongoDB</div><div class="si-type">DATABASE</div></div>
-    <div class="si"><div class="si-icon">🐘</div><div class="si-name">PostgreSQL</div><div class="si-type">DATABASE</div></div>
-    <div class="si"><div class="si-icon">🔥</div><div class="si-name">Fastify</div><div class="si-type">FRAMEWORK</div></div>
-    <div class="si"><div class="si-icon">🔴</div><div class="si-name">Redis</div><div class="si-type">CACHE</div></div>
-    <div class="si"><div class="si-icon">🐇</div><div class="si-name">RabbitMQ</div><div class="si-type">MESSAGING</div></div>
-    <div class="si"><div class="si-icon">🔌</div><div class="si-name">Socket.io</div><div class="si-type">REAL-TIME</div></div>
-    <div class="si"><div class="si-icon">☁️</div><div class="si-name">AWS</div><div class="si-type">CLOUD</div></div>
-    <div class="si"><div class="si-icon">🐳</div><div class="si-name">Docker</div><div class="si-type">CONTAINERS</div></div>
-    <div class="si"><div class="si-icon">🔑</div><div class="si-name">JWT/RBAC</div><div class="si-type">AUTH</div></div>
-    <div class="si"><div class="si-icon">🔀</div><div class="si-name">CI/CD</div><div class="si-type">DEVOPS</div></div>
-    <div class="si"><div class="si-icon">⚡</div><div class="si-name">Next.js</div><div class="si-type">FULLSTACK</div></div>
+    <div class="si"><div class="si-icon" aria-hidden="true">🟢</div><div class="si-name">Node.js</div><div class="si-type">RUNTIME</div></div>
+    <div class="si"><div class="si-icon" aria-hidden="true">🔷</div><div class="si-name">TypeScript</div><div class="si-type">LANGUAGE</div></div>
+    <div class="si"><div class="si-icon" aria-hidden="true">🛤️</div><div class="si-name">Express.js</div><div class="si-type">FRAMEWORK</div></div>
+    <div class="si"><div class="si-icon" aria-hidden="true">🔥</div><div class="si-name">Fastify</div><div class="si-type">FRAMEWORK</div></div>
+    <div class="si"><div class="si-icon" aria-hidden="true">🍃</div><div class="si-name">MongoDB</div><div class="si-type">DATABASE</div></div>
+    <div class="si"><div class="si-icon" aria-hidden="true">🐘</div><div class="si-name">PostgreSQL</div><div class="si-type">RIDEFLOW</div></div>
+    <div class="si"><div class="si-icon" aria-hidden="true">🔴</div><div class="si-name">Redis</div><div class="si-type">CACHE</div></div>
+    <div class="si"><div class="si-icon" aria-hidden="true">🐇</div><div class="si-name">RabbitMQ</div><div class="si-type">MESSAGING</div></div>
+    <div class="si"><div class="si-icon" aria-hidden="true">🔌</div><div class="si-name">Socket.IO</div><div class="si-type">REAL-TIME</div></div>
+    <div class="si"><div class="si-icon" aria-hidden="true">☁️</div><div class="si-name">AWS</div><div class="si-type">CLOUD</div></div>
+    <div class="si"><div class="si-icon" aria-hidden="true">🐳</div><div class="si-name">Docker</div><div class="si-type">CONTAINERS</div></div>
+    <div class="si"><div class="si-icon" aria-hidden="true">🔑</div><div class="si-name">JWT/RBAC</div><div class="si-type">AUTH</div></div>
+    <div class="si"><div class="si-icon" aria-hidden="true">🔀</div><div class="si-name">CI/CD</div><div class="si-type">DEVOPS</div></div>
+    <div class="si"><div class="si-icon" aria-hidden="true">🧪</div><div class="si-name">Testcontainers</div><div class="si-type">TESTING</div></div>
   </div>
   <div class="skill-grid">
-    <div class="sc"><div class="sc-head"><div class="sc-icon" style="background:#ede9fe">🖥️</div><h3>Backend</h3></div><div class="tags"><span class="tag ti">Node.js</span><span class="tag ti">Express.js</span><span class="tag ti">Fastify</span><span class="tag ti">TypeScript</span><span class="tag ti">REST API</span><span class="tag ti">Next.js</span></div></div>
-    <div class="sc"><div class="sc-head"><div class="sc-icon" style="background:#d1fae5">🗄️</div><h3>Database & Cache</h3></div><div class="tags"><span class="tag tg">MongoDB</span><span class="tag tg">PostgreSQL</span><span class="tag tg">Mongoose</span><span class="tag tg">Aggregations</span><span class="tag tg">Indexing</span><span class="tag tg">Redis</span></div></div>
-    <div class="sc"><div class="sc-head"><div class="sc-icon" style="background:#fef3c7">📡</div><h3>Real-time & Messaging</h3></div><div class="tags"><span class="tag ta">Socket.io</span><span class="tag ta">RabbitMQ</span><span class="tag ta">Event-driven</span><span class="tag ta">Microservices</span></div></div>
-    <div class="sc"><div class="sc-head"><div class="sc-icon" style="background:#f5f3ff">🔒</div><h3>Auth & Security</h3></div><div class="tags"><span class="tag tv">JWT</span><span class="tag tv">bcrypt</span><span class="tag tv">RBAC</span><span class="tag tv">Input Validation</span></div></div>
-    <div class="sc"><div class="sc-head"><div class="sc-icon" style="background:#fdf4ff">☁️</div><h3>Cloud & DevOps</h3></div><div class="tags"><span class="tag tp">AWS EC2</span><span class="tag tp">AWS S3</span><span class="tag tp">Docker</span><span class="tag tp">CI/CD</span><span class="tag tp">Git</span></div></div>
-    <div class="sc"><div class="sc-head"><div class="sc-icon" style="background:#ede9fe">📐</div><h3>Architecture</h3></div><div class="tags"><span class="tag ti">Microservices</span><span class="tag ti">REST</span><span class="tag ti">Event-driven</span><span class="tag ti">Agile/Scrum</span></div></div>
+    <div class="sc"><div class="sc-head"><div class="sc-icon" style="background:#ede9fe" aria-hidden="true">🖥️</div><h3>Backend</h3></div><div class="tags"><span class="tag ti">Node.js</span><span class="tag ti">TypeScript</span><span class="tag ti">JavaScript</span><span class="tag ti">Express.js</span><span class="tag ti">Fastify</span><span class="tag ti">REST APIs</span></div></div>
+    <div class="sc"><div class="sc-head"><div class="sc-icon" style="background:#d1fae5" aria-hidden="true">🗄️</div><h3>Data</h3></div><div class="tags"><span class="tag tg">MongoDB</span><span class="tag tg">Mongoose</span><span class="tag tg">PostgreSQL (RideFlow)</span><span class="tag tg">Indexing</span><span class="tag tg">Aggregation pipelines</span></div></div>
+    <div class="sc"><div class="sc-head"><div class="sc-icon" style="background:#fef3c7" aria-hidden="true">📡</div><h3>Distributed Systems</h3></div><div class="tags"><span class="tag ta">Redis</span><span class="tag ta">RabbitMQ</span><span class="tag ta">Socket.IO</span><span class="tag ta">Caching</span><span class="tag ta">Rate limiting</span><span class="tag ta">Concurrency control</span><span class="tag ta">Idempotency</span><span class="tag ta">Transactional outbox</span></div></div>
+    <div class="sc"><div class="sc-head"><div class="sc-icon" style="background:#f5f3ff" aria-hidden="true">🧪</div><h3>Testing &amp; Observability</h3></div><div class="tags"><span class="tag tv">Jest</span><span class="tag tv">Vitest</span><span class="tag tv">Testcontainers</span><span class="tag tv">Pino</span><span class="tag tv">Prometheus</span><span class="tag tv">Grafana</span></div></div>
+    <div class="sc"><div class="sc-head"><div class="sc-icon" style="background:#ede9fe" aria-hidden="true">🔒</div><h3>Security</h3></div><div class="tags"><span class="tag ti">JWT</span><span class="tag ti">bcrypt</span><span class="tag ti">Argon2id</span><span class="tag ti">RBAC</span></div></div>
+    <div class="sc"><div class="sc-head"><div class="sc-icon" style="background:#fdf4ff" aria-hidden="true">☁️</div><h3>Cloud &amp; DevOps</h3></div><div class="tags"><span class="tag tp">AWS EC2/S3</span><span class="tag tp">Docker</span><span class="tag tp">GitHub Actions</span><span class="tag tp">CI/CD</span><span class="tag tp">Git</span></div></div>
   </div>
 </section>
 
@@ -328,7 +356,7 @@ footer{text-align:center;padding:2rem;font-size:12px;color:var(--text3);border-t
   <div class="label">// Education</div>
   <h2>Academic <em>background</em></h2>
   <div class="edu">
-    <div class="edu-icon">🎓</div>
+    <div class="edu-icon" aria-hidden="true">🎓</div>
     <div class="edu-info">
       <h3>B.Tech – Mechanical Engineering</h3>
       <p>Global Institute of Technology, Jaipur</p>
@@ -340,14 +368,16 @@ footer{text-align:center;padding:2rem;font-size:12px;color:var(--text3);border-t
 <div id="contact">
   <div class="label" style="justify-content:center;display:flex">// Contact</div>
   <h2 style="margin-top:6px">Let's <em>work together</em></h2>
-  <p class="c-sub">Open to backend engineering roles — especially in healthcare, fintech, or high-scale consumer products. Drop me a message!</p>
-  <a href="mailto:abhinavmangal68@gmail.com" class="c-email">📧 abhinavmangal68@gmail.com</a><br>
+  <p class="c-sub">Open to Backend Engineer and Software Engineer – Backend opportunities. Interested in building reliable APIs, distributed systems, and data-intensive backend services.</p>
+  <a href="mailto:abhinavmangal68@gmail.com" class="c-email"><span aria-hidden="true">📧</span> abhinavmangal68@gmail.com</a><br>
   <div class="c-links">
-    <a href="tel:+917877822124" class="cl">📞 +91 7877822124</a>
-    <a href="https://www.linkedin.com/in/abhinavmangal" target="_blank" class="cl">🔗 LinkedIn ↗</a>
-    <a href="https://github.com/abhinav0988" target="_blank" class="cl">💻 GitHub ↗</a>
+    <a href="tel:+917877822124" class="cl"><span aria-hidden="true">📞</span> +91 7877822124</a>
+    <a href="https://www.linkedin.com/in/abhinavmangal" class="cl" target="_blank" rel="noopener noreferrer"><span aria-hidden="true">🔗</span> LinkedIn ↗</a>
+    <a href="https://github.com/abhinav0988" class="cl" target="_blank" rel="noopener noreferrer"><span aria-hidden="true">💻</span> GitHub ↗</a>
   </div>
 </div>
 
-</div>
+</main>
 <footer>© 2026 Abhinav Mangal · Node.js Backend Developer · Hyderabad, India</footer>
+</body>
+</html>
