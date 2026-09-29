@@ -1,4 +1,5 @@
 
+<meta charset="utf-8">
 <style>
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
 :root{
@@ -77,8 +78,8 @@ h1 .hi{color:var(--indigo)}
 .mn{font-size:15px;font-weight:900;color:var(--emerald);line-height:1}
 .ml{font-size:11px;color:#065f46;font-weight:500}
 .ach{list-style:none;display:flex;flex-direction:column;gap:11px}
-.ach li{display:flex;gap:10px;font-size:13.5px;line-height:1.7;color:var(--text2)}
-.ach li::before{content:'';width:7px;height:7px;border-radius:50%;background:var(--indigo);flex-shrink:0;margin-top:7px}
+.ach li{position:relative;padding-left:17px;font-size:13.5px;line-height:1.7;color:var(--text2)}
+.ach li::before{content:'';position:absolute;left:0;top:8px;width:7px;height:7px;border-radius:50%;background:var(--indigo)}
 .ach li strong{color:var(--text);font-weight:700}
 
 /* STACK GRID */
@@ -111,6 +112,21 @@ h1 .hi{color:var(--indigo)}
 .edu-info p{font-size:12px;color:var(--text2)}
 .edu-yr{margin-left:auto;background:var(--indigo-light);color:var(--indigo);font-size:12px;font-weight:700;padding:6px 14px;border-radius:100px;border:1px solid var(--indigo-mid)}
 
+/* PROJECTS */
+.proj-list{display:flex;flex-direction:column;gap:1.25rem}
+.proj{background:#fff;border:1px solid var(--border);border-radius:16px;padding:2rem 2.1rem;box-shadow:var(--shadow);transition:border-color 0.2s,box-shadow 0.2s}
+.proj:hover{border-color:var(--indigo-mid);box-shadow:var(--shadow2)}
+.proj-hd{display:flex;justify-content:space-between;align-items:flex-start;gap:1rem;margin-bottom:.85rem;flex-wrap:wrap}
+.proj-kicker{font-size:11px;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;color:var(--indigo);margin-bottom:4px}
+.proj-title{font-size:1.15rem;font-weight:800;color:var(--text);letter-spacing:-0.02em}
+.proj-meta{font-size:12px;color:var(--text3);margin-top:3px}
+.proj-desc{font-size:13.5px;color:var(--text2);margin-bottom:1rem;max-width:680px}
+.proj-actions{display:flex;align-items:center;gap:.6rem;flex-shrink:0}
+.proj-link{display:inline-flex;align-items:center;gap:6px;padding:8px 14px;border-radius:9px;font-size:12.5px;font-weight:700;color:var(--indigo);background:var(--indigo-light);border:1.5px solid var(--indigo-mid);text-decoration:none;transition:all 0.2s;white-space:nowrap}
+.proj-link:hover{background:var(--indigo);color:#fff;transform:translateY(-1px)}
+.proj .ach{margin-top:1rem}
+.proj .tags{margin-bottom:.15rem}
+
 /* CONTACT */
 #contact{background:linear-gradient(135deg,var(--indigo-light) 0%,#f5f3ff 100%);border-radius:20px;padding:3.5rem 2rem;text-align:center;border:1px solid var(--border2);margin-bottom:3rem}
 #contact h2{margin-bottom:.75rem}
@@ -131,6 +147,7 @@ footer{text-align:center;padding:2rem;font-size:12px;color:var(--text3);border-t
   .exp-hd{flex-direction:column}
   .exp-loc{text-align:left}
   .edu-yr{margin-left:0}
+  .proj-hd{flex-direction:column}
 }
 </style>
 
@@ -139,6 +156,7 @@ footer{text-align:center;padding:2rem;font-size:12px;color:var(--text3);border-t
   <ul class="nav-links">
     <li><a href="#hero">About</a></li>
     <li><a href="#experience">Experience</a></li>
+    <li><a href="#projects">Projects</a></li>
     <li><a href="#skills">Skills</a></li>
     <li><a href="#contact">Contact</a></li>
   </ul>
@@ -213,6 +231,70 @@ footer{text-align:center;padding:2rem;font-size:12px;color:var(--text3);border-t
   </div>
 </section>
 
+<section id="projects">
+  <div class="label">// Projects</div>
+  <h2>Selected <em>projects</em></h2>
+  <div class="proj-list">
+    <article class="proj">
+      <div class="proj-hd">
+        <div>
+          <div class="proj-kicker">Personal · Distributed systems</div>
+          <div class="proj-title">RideFlow — Real-Time Ride Platform</div>
+          <div class="proj-meta">Node.js · TypeScript · PostgreSQL · Redis · RabbitMQ · Socket.IO</div>
+        </div>
+        <div class="proj-actions">
+          <a class="proj-link" href="https://github.com/abhinav0988/rideflow" target="_blank" rel="noopener">GitHub ↗</a>
+        </div>
+      </div>
+      <p class="proj-desc">Production-style ride platform covering nearby-driver discovery, race-safe acceptance, and at-least-once messaging across multiple Socket.IO servers.</p>
+      <div class="tags">
+        <span class="tag ti">TypeScript</span>
+        <span class="tag tg">PostgreSQL</span>
+        <span class="tag tg">Redis GEO</span>
+        <span class="tag ta">RabbitMQ</span>
+        <span class="tag ta">Socket.IO</span>
+        <span class="tag tv">Jest</span>
+        <span class="tag tv">Testcontainers</span>
+      </div>
+      <ul class="ach">
+        <li><strong>Nearby-driver discovery</strong> with Redis GEO and 30-second presence expiration, with Socket.IO instances connected through the Redis adapter.</li>
+        <li><strong>Race-safe ride acceptance</strong> using Redis SET NX locking and a PostgreSQL conditional update so only one driver can accept an offered ride.</li>
+        <li><strong>Transactional outbox</strong> with PostgreSQL idempotency, RabbitMQ publisher confirms, retries, a dead-letter queue, and idempotent consumers.</li>
+        <li><strong>Concurrency and messaging tests</strong> with Jest and Testcontainers, plus GitHub Actions CI for the distributed flows.</li>
+      </ul>
+    </article>
+
+    <article class="proj">
+      <div class="proj-hd">
+        <div>
+          <div class="proj-kicker">Personal · v1.0.0</div>
+          <div class="proj-title">Shortify — URL Shortener &amp; Analytics</div>
+          <div class="proj-meta">Fastify · TypeScript · MongoDB · Redis · React</div>
+        </div>
+        <div class="proj-actions">
+          <a class="proj-link" href="https://github.com/abhinav0988/shortify" target="_blank" rel="noopener">GitHub ↗</a>
+        </div>
+      </div>
+      <p class="proj-desc">Full-stack shortener with unique short codes under concurrent creates, cache-aside redirects, shared rate limits, and click analytics.</p>
+      <div class="tags">
+        <span class="tag ti">Fastify</span>
+        <span class="tag ti">TypeScript</span>
+        <span class="tag tg">MongoDB</span>
+        <span class="tag tg">Redis</span>
+        <span class="tag ta">React</span>
+        <span class="tag tv">Jest</span>
+        <span class="tag tv">Vitest</span>
+      </div>
+      <ul class="ach">
+        <li><strong>Base62 codes and custom aliases</strong> on Fastify, with MongoDB unique indexes and bounded retries so short codes stay unique under concurrent requests.</li>
+        <li><strong>Redis cache-aside redirects</strong> with expiration-aware TTLs, MongoDB fallback when Redis errors, and cache invalidation when a link changes.</li>
+        <li><strong>Shared fixed-window rate limits</strong> via atomic Redis Lua scripts, plus click analytics built on MongoDB aggregations and atomic counters.</li>
+        <li><strong>99-test suite</strong> covering backend and frontend with Jest, Vitest, and Testcontainers, and GitHub Actions CI for typecheck, tests, and production builds.</li>
+      </ul>
+    </article>
+  </div>
+</section>
+
 <section id="skills">
   <div class="label">// Tech Stack</div>
   <h2>Tools & <em>technologies</em></h2>
@@ -221,6 +303,8 @@ footer{text-align:center;padding:2rem;font-size:12px;color:var(--text3);border-t
     <div class="si"><div class="si-icon">🔷</div><div class="si-name">TypeScript</div><div class="si-type">LANGUAGE</div></div>
     <div class="si"><div class="si-icon">🛤️</div><div class="si-name">Express.js</div><div class="si-type">FRAMEWORK</div></div>
     <div class="si"><div class="si-icon">🍃</div><div class="si-name">MongoDB</div><div class="si-type">DATABASE</div></div>
+    <div class="si"><div class="si-icon">🐘</div><div class="si-name">PostgreSQL</div><div class="si-type">DATABASE</div></div>
+    <div class="si"><div class="si-icon">🔥</div><div class="si-name">Fastify</div><div class="si-type">FRAMEWORK</div></div>
     <div class="si"><div class="si-icon">🔴</div><div class="si-name">Redis</div><div class="si-type">CACHE</div></div>
     <div class="si"><div class="si-icon">🐇</div><div class="si-name">RabbitMQ</div><div class="si-type">MESSAGING</div></div>
     <div class="si"><div class="si-icon">🔌</div><div class="si-name">Socket.io</div><div class="si-type">REAL-TIME</div></div>
@@ -231,8 +315,8 @@ footer{text-align:center;padding:2rem;font-size:12px;color:var(--text3);border-t
     <div class="si"><div class="si-icon">⚡</div><div class="si-name">Next.js</div><div class="si-type">FULLSTACK</div></div>
   </div>
   <div class="skill-grid">
-    <div class="sc"><div class="sc-head"><div class="sc-icon" style="background:#ede9fe">🖥️</div><h3>Backend</h3></div><div class="tags"><span class="tag ti">Node.js</span><span class="tag ti">Express.js</span><span class="tag ti">TypeScript</span><span class="tag ti">REST API</span><span class="tag ti">Next.js</span></div></div>
-    <div class="sc"><div class="sc-head"><div class="sc-icon" style="background:#d1fae5">🗄️</div><h3>Database & Cache</h3></div><div class="tags"><span class="tag tg">MongoDB</span><span class="tag tg">Mongoose</span><span class="tag tg">Aggregations</span><span class="tag tg">Indexing</span><span class="tag tg">Redis</span></div></div>
+    <div class="sc"><div class="sc-head"><div class="sc-icon" style="background:#ede9fe">🖥️</div><h3>Backend</h3></div><div class="tags"><span class="tag ti">Node.js</span><span class="tag ti">Express.js</span><span class="tag ti">Fastify</span><span class="tag ti">TypeScript</span><span class="tag ti">REST API</span><span class="tag ti">Next.js</span></div></div>
+    <div class="sc"><div class="sc-head"><div class="sc-icon" style="background:#d1fae5">🗄️</div><h3>Database & Cache</h3></div><div class="tags"><span class="tag tg">MongoDB</span><span class="tag tg">PostgreSQL</span><span class="tag tg">Mongoose</span><span class="tag tg">Aggregations</span><span class="tag tg">Indexing</span><span class="tag tg">Redis</span></div></div>
     <div class="sc"><div class="sc-head"><div class="sc-icon" style="background:#fef3c7">📡</div><h3>Real-time & Messaging</h3></div><div class="tags"><span class="tag ta">Socket.io</span><span class="tag ta">RabbitMQ</span><span class="tag ta">Event-driven</span><span class="tag ta">Microservices</span></div></div>
     <div class="sc"><div class="sc-head"><div class="sc-icon" style="background:#f5f3ff">🔒</div><h3>Auth & Security</h3></div><div class="tags"><span class="tag tv">JWT</span><span class="tag tv">bcrypt</span><span class="tag tv">RBAC</span><span class="tag tv">Input Validation</span></div></div>
     <div class="sc"><div class="sc-head"><div class="sc-icon" style="background:#fdf4ff">☁️</div><h3>Cloud & DevOps</h3></div><div class="tags"><span class="tag tp">AWS EC2</span><span class="tag tp">AWS S3</span><span class="tag tp">Docker</span><span class="tag tp">CI/CD</span><span class="tag tp">Git</span></div></div>
@@ -266,4 +350,4 @@ footer{text-align:center;padding:2rem;font-size:12px;color:var(--text3);border-t
 </div>
 
 </div>
-<footer>© 2025 Abhinav Mangal · Node.js Backend Developer · Hyderabad, India</footer>
+<footer>© 2026 Abhinav Mangal · Node.js Backend Developer · Hyderabad, India</footer>
